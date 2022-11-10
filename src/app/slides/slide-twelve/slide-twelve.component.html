@@ -1,0 +1,8 @@
+<h2>HTMLMediaElement</h2>
+<!-- prettier-ignore -->
+<adc-prism language="html" ngPreserveWhitespaces><!-- htmlmin:ignore -->&lt;audio src="some.file"&gt;&lt;/audio&gt;
+&lt;audio src="some-other.file"&gt;&lt;/audio&gt;<!-- htmlmin:ignore --></adc-prism>
+<!-- prettier-ignore -->
+<adc-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->document
+    .querySelectorAll('audio')
+    .forEach(($element) =&gt; $element.play());<!-- htmlmin:ignore --></adc-prism>

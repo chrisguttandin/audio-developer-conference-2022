@@ -1,0 +1,26 @@
+.title-card {
+    aspect-ratio: 16/9;
+    background-image: url('../../../images/title-card.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: -3.9vw;
+    width: calc(100% + 7.8vw);
+}
+
+.hidden-headline {
+    display: block;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .title-card {
+        height: calc(100% + 13.88vh);
+        margin: -6.94vh;
+        width: calc(100% + 13.88vh);
+    }
+}

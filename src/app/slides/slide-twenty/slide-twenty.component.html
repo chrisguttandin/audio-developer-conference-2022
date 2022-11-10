@@ -1,0 +1,9 @@
+<h2>TimingObject</h2>
+<!-- prettier-ignore -->
+<adc-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->const timingObject = new TimingObject();
+
+document
+    .querySelectorAll('audio')
+    .forEach(($element) =&gt; setTimingsrc($element, timingObject));
+
+setTimeout(() =&gt; timingObject.update(&#123; velocity: 1 }), 1000);<!-- htmlmin:ignore --></adc-prism>

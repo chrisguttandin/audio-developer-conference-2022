@@ -1,0 +1,10 @@
+<h2 class="squeezed">TimedAudioBufferSourceNode</h2>
+<!-- prettier-ignore -->
+<adc-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->for (const buffer of buffers) &#123;
+    const source = new TimedAudioBufferSourceNode(
+        audioContext,
+        &#123; buffer, timingsrc: timingObject }
+    );
+    source.connect(audioContext.destination);
+}
+timingObject.update(&#123; velocity: 1 });<!-- htmlmin:ignore --></adc-prism>
