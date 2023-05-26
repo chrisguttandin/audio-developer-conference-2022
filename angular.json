@@ -146,7 +146,7 @@
             "inlineTemplate": false,
             "prefix": "adc",
             "skipTests": true,
-            "style": "css"
+            "style": "scss"
         },
         "@schematics/angular:directive": {
             "prefix": "adc",
