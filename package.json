@@ -22,7 +22,7 @@
         "prismjs": "^1.29.0",
         "rxjs": "~7.8.1",
         "subscribable-things": "^2.1.21",
-        "tslib": "^2.5.3",
+        "tslib": "^2.6.0",
         "zone.js": "~0.13.1"
     },
     "description": "My talk at the Audio Developer Conference in 2022.",
