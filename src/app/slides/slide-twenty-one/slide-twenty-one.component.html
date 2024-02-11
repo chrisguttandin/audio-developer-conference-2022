@@ -2,7 +2,7 @@
 <!-- prettier-ignore -->
 <adc-prism language="javascript" ngPreserveWhitespaces><!-- htmlmin:ignore -->const currentTime = audioContext.currentTime;
 
-for (const source of audioBufferSourceNodes) &#123;
+for (const source of audioBufferSourceNodes) &lbrace;
     source.connect(audioContext.destination);
     source.start(currentTime + 1);
-&#125;<!-- htmlmin:ignore --></adc-prism>
+&rbrace;<!-- htmlmin:ignore --></adc-prism>
