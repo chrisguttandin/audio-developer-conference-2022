@@ -60,7 +60,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "audio-developer-conference-2022:build"
+                        "buildTarget": "audio-developer-conference-2022:build"
                     }
                 },
                 "lint": {
@@ -80,10 +80,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "development": {
-                            "browserTarget": "audio-developer-conference-2022:build:development"
+                            "buildTarget": "audio-developer-conference-2022:build:development"
                         },
                         "production": {
-                            "browserTarget": "audio-developer-conference-2022:build:production"
+                            "buildTarget": "audio-developer-conference-2022:build:production"
                         }
                     },
                     "defaultConfiguration": "development",
