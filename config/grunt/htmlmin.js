@@ -5,7 +5,7 @@ module.exports = {
                 cwd: 'build/audio-developer-conference-2022/browser',
                 dest: 'build/audio-developer-conference-2022/browser',
                 expand: true,
-                src: ['**/*.html']
+                src: ['**/404.html']
             }
         ],
         options: {
