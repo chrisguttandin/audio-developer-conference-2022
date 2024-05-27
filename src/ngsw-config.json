@@ -5,7 +5,7 @@
             "installMode": "prefetch",
             "name": "app",
             "resources": {
-                "files": ["/index.html", "/*.css", "/*.js", "/*.woff", "/*.woff2"]
+                "files": ["/index.html", "/media/**", "/*.css", "/*.js", "/*.woff", "/*.woff2"]
             }
         },
         {
