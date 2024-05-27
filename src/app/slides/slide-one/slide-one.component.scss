@@ -19,8 +19,8 @@
 
 @media (min-aspect-ratio: 16/9) {
     .title-card {
-        height: calc(100% + 13.88vh);
-        margin: -6.94vh;
-        width: calc(100% + 13.88vh);
+        height: calc(100% + 7.8vh * 16 / 9);
+        margin: calc(-3.9vh * 16 / 9);
+        width: calc(100% + 7.8vh * 16 / 9);
     }
 }
