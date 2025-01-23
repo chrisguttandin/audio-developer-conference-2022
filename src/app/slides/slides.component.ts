@@ -13,7 +13,6 @@ const NO_TRANSITION_PARAMS = { duration: '0s', enterTransform: 'none', leaveTran
     animations: [trigger('transition', [transition('* => *', [useAnimation(slideAnimation)])])],
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [RouterLink, RouterOutlet],
-    standalone: true,
     styleUrls: ['./slides.component.scss'],
     templateUrl: './slides.component.html'
 })
