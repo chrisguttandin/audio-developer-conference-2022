@@ -38,9 +38,18 @@ for (let slide = 1; slide < 33; slide += 1) {
 
                     expect(await page.evaluate(() => navigator.serviceWorker.getRegistration())).toBeDefined();
 
-                    await expect(page).toHaveScreenshot(name, {
-                        fullPage: true
-                    });
+                    if (env.CI !== 'true' && env.IS_SMOKE_TEST === 'true' && slide === 3) {
+                        await expect(page).not.toHaveScreenshot(name, {
+                            fullPage: true
+                        });
+                        await expect(page).toHaveScreenshot(`slide-${slide}-when-offline-should-look-the-same-1.png`, {
+                            fullPage: true
+                        });
+                    } else {
+                        await expect(page).toHaveScreenshot(name, {
+                            fullPage: true
+                        });
+                    }
                 }
             });
         });
@@ -54,6 +63,17 @@ for (let slide = 1; slide < 33; slide += 1) {
                 if (browserName !== 'firefox') {
                     expect(await page.evaluate(() => navigator.serviceWorker.getRegistration())).toBeUndefined();
                 }
+
+                await expect(page).toHaveScreenshot(name, {
+                    fullPage: true
+                });
+            });
+        });
+
+        test.describe('without font synthesis', () => {
+            test('should look the same', async ({ page }) => {
+                await page.goto(path);
+                await page.locator('html').evaluate(({ style }) => (style.fontSynthesis = 'none'));
 
                 await expect(page).toHaveScreenshot(name, {
                     fullPage: true
