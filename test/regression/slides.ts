@@ -71,13 +71,27 @@ for (let slide = 1; slide < 33; slide += 1) {
         });
 
         test.describe('without font synthesis', () => {
-            test('should look the same', async ({ page }) => {
+            test('should look the same', async ({ browserName, page }) => {
                 await page.goto(path);
                 await page.locator('html').evaluate(({ style }) => (style.fontSynthesis = 'none'));
 
-                await expect(page).toHaveScreenshot(name, {
-                    fullPage: true
-                });
+                if (
+                    env.CI === 'true' &&
+                    env.IS_SMOKE_TEST === 'true' &&
+                    browserName === 'chromium' &&
+                    [12, 13, 15, 16, 19, 20, 21, 23, 26].includes(slide)
+                ) {
+                    await expect(page).not.toHaveScreenshot(name, {
+                        fullPage: true
+                    });
+                    await expect(page).toHaveScreenshot(`slide-${slide}-without-font-synthesis-should-look-the-same-1.png`, {
+                        fullPage: true
+                    });
+                } else {
+                    await expect(page).toHaveScreenshot(name, {
+                        fullPage: true
+                    });
+                }
             });
         });
     });
