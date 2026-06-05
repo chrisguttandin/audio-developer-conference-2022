@@ -41,14 +41,16 @@ export default defineConfig({
     testDir: '../../test',
     testMatch: /(?:e2e|regression)\/(?!.*\.po\.ts$).*\.ts$/,
     use: {
-        baseURL: env.IS_SMOKE_TEST === 'true' ? 'https://chrisguttandin.github.io/audio-developer-conference-2022/' : 'http://localhost:6677',
+        baseURL:
+            env.IS_SMOKE_TEST === 'true' ? 'https://chrisguttandin.github.io/audio-developer-conference-2022/' : 'http://localhost:6677',
         trace: 'on-first-retry'
     },
-    webServer: env.IS_SMOKE_TEST === 'true'
-        ? undefined
-        : {
-              command: 'npm run monitor',
-              port: 6677
-          },
+    webServer:
+        env.IS_SMOKE_TEST === 'true'
+            ? undefined
+            : {
+                  command: 'npm run monitor',
+                  port: 6677
+              },
     workers: env.CI === 'true' ? 1 : undefined
 });
