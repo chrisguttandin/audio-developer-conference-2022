@@ -107,6 +107,7 @@
     "license": "MIT",
     "main": "src/index.html",
     "name": "audio-developer-conference-2022",
+    "packageManager": "npm@12",
     "private": true,
     "repository": {
         "type": "git",
